@@ -1,4 +1,4 @@
-# Project Title
+# Screenplay Parser
 
 This is a screenplay parser that focuses on dialogues between characters. The parser picks up a dialogue whenever the second character has a paranthetical.
 
@@ -8,11 +8,9 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+You need to have 
+- [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-beautiful-soup)
+- [Scraper]()
 
 ### Installing
 
