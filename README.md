@@ -1,76 +1,38 @@
 # Screenplay Parser
 
-This is a screenplay parser that focuses on dialogues between characters. The parser picks up a dialogue whenever the second character has a paranthetical.
+This is a screenplay parser that extracts dialogues between characters. However it extracts the dialogues **if the second character has a [paranthetical](http://www.screenwriting.info/08.php)**. The scripts are crawled from http://www.imsdb.com/ . 
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+1. Run scrapy : Go to brickset-scraper folder and run this in your terminal: 
+
+		scrapy runspider scraper.py
+
+	This will generate "all_movies.json" file in the same folder.
+    
+1. Copy all_movies.json to html_crawlers folder. Run "json parser.ipynb" through jupyter notebook. This will read "all_movies.json" and will create "all_name_script.txt". This new txt file has a movie name and a link to its script for each movie in the json file.
+
+1. Run "html_list_parser.ipynb" . This will read "all_name_script.txt" and will generate "All_out.txt". This file has all the relevant dialogues from the movie scripts.
+
 
 ### Prerequisites
 
 You need to have 
+
 - [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-beautiful-soup)
 - [Scraper]()
-
-### Installing
-
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
+- Python 3 or above
+- [Jupyter Notebook](http://jupyter.org/install.html)
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+**Kamil Veli Toraman**:  [kvtoraman](https://github.com/kvtoraman)
 
 ## License
 
-There is no licence for now. You can use as you please.
+There is no licence for now. You can use as you please. This code tries to have a rule-based algorithm for movie scripts. If you have a better way, please inform me :)
 
 ## Acknowledgments
 
-* This is a result of a 2 month internship in Kaist Data Science Lab
+* This is a result of a 2 month internship in Data Science Lab, Kaist. 
+

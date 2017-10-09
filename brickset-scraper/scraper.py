@@ -3,7 +3,7 @@ import scrapy
 
 
 class MoviesSpider(scrapy.Spider):
-    name = "movies"
+    name = "all_movies"
     start_urls = [
         'http://www.imsdb.com/all%20scripts/',
     ]
