@@ -4,8 +4,9 @@
 import json
 from bs4 import BeautifulSoup
 from urllib import request
+import sys
 
-with open('all_movies.json') as data_file:    
+with open(sys.argv[1]) as data_file:    
     data = json.load(data_file)
     
 with open('all_name_script.txt','w') as out:    
@@ -21,7 +22,7 @@ with open('all_name_script.txt','w') as out:
         found = False
         for link in links_in_page:
             text = link.get_text()
-            print("->" + text)
+            # print("->" + text)
             if 'Read' in text and 'Script' in text:
                 found = True
                 script_link = 'http://www.imsdb.com' + link.get('href')

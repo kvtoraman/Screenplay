@@ -14,6 +14,7 @@ from bs4 import BeautifulSoup
 
 
 VERBOSE = False
+PRINT_ALL_SCRIPTS = False
 #verbose print
 def vprint(s):
     if VERBOSE:
@@ -146,7 +147,7 @@ def misintented_names():
     for i in range(len(lines)):
         if len(lines[i]) > 0 and is_all_caps(lines[i]) and lines[i][0].isupper():
             if not is_scene_changer(lines[i]):
-                print(lines[i])
+                vprint(lines[i])
                 #print(lines[i+1])
                 lines[i] = ""
 def is_scene_changer(line):#deteck scene changer lines
@@ -284,7 +285,7 @@ def print_dialogues(movie_name,url):
             print("Line {0} has more than one (",i)
     #check whether the movies is parsed well or not
     if len(to_be_printed) < 3:
-        with open('Problem_movies.txt','a') as pmovies:
+        with open('Problem_movies.txt','a', encoding='utf-8') as pmovies:
             pmovies.write(movie_name + "\t" + url + '\n')
             print('PROBLEM in ',movie_name)
     else:
@@ -297,7 +298,7 @@ def print_dialogues(movie_name,url):
 def print_remaining():
     global lines
     for i,line in enumerate(lines):
-        print(line)
+        vprint(line)
 def parse(movie_name,url):
     global lines
     
@@ -342,10 +343,12 @@ def parse(movie_name,url):
     reserved_chars = ["<",">",":",'"',"/","\\","|","?","*"]
     for ch in reserved_chars:
         MOVIE_NAME = MOVIE_NAME.replace(ch,'')
-    with open(MOVIE_NAME+ "_original.txt","w",encoding='utf-8') as f:
-        for i,line in enumerate(lines):
-            f.write(lines[i]+'\n')
-        
+
+    if PRINT_ALL_SCRIPTS:
+        with open(MOVIE_NAME+ "_original.txt","w",encoding='utf-8') as f:
+            for i,line in enumerate(lines):
+                f.write(lines[i]+'\n')
+            
     for i,line in enumerate(lines):
         lines[i] = lines[i].replace("’","'")
         lines[i] = lines[i].replace('(MORE)','')#replace all (MORE)
