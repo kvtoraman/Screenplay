@@ -1,6 +1,6 @@
 # Screenplay Parser
 
-This is a screenplay parser that extracts dialogues between characters. However it extracts the dialogues **if the second character has a [paranthetical](http://www.screenwriting.info/08.php)**. The scripts are crawled from http://www.imsdb.com/ . 
+This is a screenplay parser that extracts dialogues between characters. However it extracts the dialogues **if the second character has a [paranthetical](https://writebetterscripts.com/parenthetical-script/)**. The scripts are crawled from http://www.imsdb.com/ . 
 
 ## Getting Started
 
