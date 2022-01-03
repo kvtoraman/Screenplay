@@ -6,9 +6,9 @@ This is a screenplay parser that extracts dialogues between characters. However 
 
 1. Run scrapy : Go to brickset-scraper folder and run this in your terminal: 
 
-		scrapy runspider scraper.py --output=names_links.json
+		scrapy runspider scraper.py --output=data/names_links.json
 
-	This will generate "names_links.json" file in the same folder.
+	This will generate `data/names_links.json`.
     
 1. Run "json_parser.py" via terminal command "python json_parser.py names_links.json". This will read "names_links.json" and will create "all_name_script.txt". This new txt file has a movie name and a link to its script for each movie in the json file. Note that each script takes 1-2 seconds.
 
