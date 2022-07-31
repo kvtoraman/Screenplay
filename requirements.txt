@@ -29,7 +29,7 @@ PyDispatcher==2.0.5
 pyOpenSSL==21.0.0
 queuelib==1.6.2
 regex==2021.11.10
-Scrapy==2.5.1
+Scrapy==2.6.2
 service-identity==21.1.0
 six==1.16.0
 soupsieve==2.3.1
