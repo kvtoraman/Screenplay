@@ -16,7 +16,7 @@ incremental==21.3.0
 itemadapter==0.4.0
 itemloaders==1.0.4
 jmespath==0.10.0
-joblib==1.1.0
+joblib==1.2.0
 lxml==4.9.1
 nltk==3.6.7
 parsel==1.6.0
